@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301023325) do
+ActiveRecord::Schema.define(:version => 20110301024506) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(:version => 20110301023325) do
     t.string   "image_uid"
     t.string   "image_ext"
   end
+
+  create_table "ladies", :force => true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.integer  "photo_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ladies", ["id"], :name => "index_ladies_on_id"
 
   create_table "page_part_translations", :force => true do |t|
     t.integer  "page_part_id"

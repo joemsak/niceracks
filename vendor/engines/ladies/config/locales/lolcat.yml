@@ -1,0 +1,24 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    ladies:
+      title: Ladies
+  admin:
+    ladies:
+      index:
+        title: Ladies
+        create_new: CREATE NEW Lady
+        reorder: REORDR Ladies
+        reorder_done: DUN REORDERIN Ladies
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Ladies YET. CLICK "CREATE NEW Lady" 2 ADD UR FURST lady.
+      lady:
+        view_live_html: VIEW DIS lady LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS lady
+        delete: REMOOV DIS lady FOREVR
+  ladies:
+    show:
+      other: OTHR Ladies

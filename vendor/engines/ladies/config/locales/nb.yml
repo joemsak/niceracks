@@ -1,0 +1,20 @@
+nb:
+  plugins:
+    ladies:
+      title: Ladies
+  admin:
+    ladies:
+      index:
+        title: Ladies
+        create_new: Lag en ny Lady
+        reorder: Endre rekkefølgen på Ladies
+        reorder_done: Ferdig å endre rekkefølgen Ladies
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Ladies enda. Klikk på "Lag en ny Lady" for å legge til din første lady.
+      lady:
+        view_live_html: Vis hvordan denne lady ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne lady
+        delete: Fjern denne lady permanent
+  ladies:
+    show:
+      other: Andre Ladies

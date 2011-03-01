@@ -1,3 +1,8 @@
+PATH
+  remote: vendor/engines
+  specs:
+    refinerycms-ladies (1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -146,4 +151,5 @@ DEPENDENCIES
   rails (= 3.0.5)
   refinerycms (= 0.9.9.4)
   refinerycms-i18n (~> 0.9.9.9)
+  refinerycms-ladies (= 1.0)!
   sqlite3

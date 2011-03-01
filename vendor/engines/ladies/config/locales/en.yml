@@ -1,0 +1,24 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    ladies:
+      title: Ladies
+  admin:
+    ladies:
+      index:
+        title: Ladies
+        create_new: Add New Lady
+        reorder: Reorder Ladies
+        reorder_done: Done Reordering Ladies
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Ladies yet. Click "Add New Lady" to add your first lady.
+      lady:
+        view_live_html: View this lady live <br/><em>(opens in a new window)</em>
+        edit: Edit this lady
+        delete: Remove this lady forever
+  ladies:
+    show:
+      other: Other Ladies

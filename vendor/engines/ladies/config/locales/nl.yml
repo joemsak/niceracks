@@ -1,0 +1,20 @@
+nl:
+  plugins:
+    ladies:
+      title: Ladies
+  admin:
+    ladies:
+      index:
+        title: Ladies
+        create_new: Maak een nieuwe Lady
+        reorder: Wijzig de volgorde van de Ladies
+        reorder_done: Klaar met het wijzingen van de volgorde van de Ladies
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Ladies. Druk op 'Maak een nieuwe Lady' om de eerste aan te maken.
+      lady:
+        view_live_html: Bekijk deze lady op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze lady
+        delete: Verwijder deze lady voor eeuwig
+  ladies:
+    show:
+      other: Andere Ladies
