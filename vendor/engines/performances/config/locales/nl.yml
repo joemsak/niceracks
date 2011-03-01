@@ -1,0 +1,20 @@
+nl:
+  plugins:
+    performances:
+      title: Performances
+  admin:
+    performances:
+      index:
+        title: Performances
+        create_new: Maak een nieuwe Performance
+        reorder: Wijzig de volgorde van de Performances
+        reorder_done: Klaar met het wijzingen van de volgorde van de Performances
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Performances. Druk op 'Maak een nieuwe Performance' om de eerste aan te maken.
+      performance:
+        view_live_html: Bekijk deze performance op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze performance
+        delete: Verwijder deze performance voor eeuwig
+  performances:
+    show:
+      other: Andere Performances

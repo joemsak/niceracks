@@ -1,0 +1,24 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    performances:
+      title: Performances
+  admin:
+    performances:
+      index:
+        title: Performances
+        create_new: Add New Performance
+        reorder: Reorder Performances
+        reorder_done: Done Reordering Performances
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Performances yet. Click "Add New Performance" to add your first performance.
+      performance:
+        view_live_html: View this performance live <br/><em>(opens in a new window)</em>
+        edit: Edit this performance
+        delete: Remove this performance forever
+  performances:
+    show:
+      other: Other Performances

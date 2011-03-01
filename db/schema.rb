@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301024506) do
+ActiveRecord::Schema.define(:version => 20110301024859) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -98,6 +98,20 @@ ActiveRecord::Schema.define(:version => 20110301024506) do
   add_index "pages", ["lft"], :name => "index_pages_on_lft"
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
+
+  create_table "performances", :force => true do |t|
+    t.string   "venue_name"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.string   "cost"
+    t.text     "description"
+    t.string   "link"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "performances", ["id"], :name => "index_performances_on_id"
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"

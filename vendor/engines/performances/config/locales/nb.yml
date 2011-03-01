@@ -1,0 +1,20 @@
+nb:
+  plugins:
+    performances:
+      title: Performances
+  admin:
+    performances:
+      index:
+        title: Performances
+        create_new: Lag en ny Performance
+        reorder: Endre rekkefølgen på Performances
+        reorder_done: Ferdig å endre rekkefølgen Performances
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Performances enda. Klikk på "Lag en ny Performance" for å legge til din første performance.
+      performance:
+        view_live_html: Vis hvordan denne performance ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne performance
+        delete: Fjern denne performance permanent
+  performances:
+    show:
+      other: Andre Performances
