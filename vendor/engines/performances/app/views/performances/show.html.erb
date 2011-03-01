@@ -16,7 +16,7 @@
     <ul id="performances">
       <% @performances.each do |performance| %>
         <li>
-          <%= link_to performance.venue_name, performance_url(performance) %>
+          <%= link_to performance.title, performance_url(performance) %>
         </li>
       <% end %>
     </ul>
