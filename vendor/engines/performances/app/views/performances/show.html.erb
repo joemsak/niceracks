@@ -1,43 +1,12 @@
-<% content_for :body_content_title do %>
-  <%= @performance.venue_name %>
-<% end %>
-
 <% content_for :body_content_left do %>
   <section>
-    <h1>Venue Name</h1>
+    <h1><%= @performance.starts_at.strftime '%b %d' %> &ndash; <%= @performance.venue_name %></h1>
     <p>
-      <%=raw @performance.venue_name %>
+      From <%= @performance.starts_at.strftime '%b %d at %I:%M%p' %> until <%= @performance.ends_at.strftime '%b %d at %I:%M%p' %><br>
+      <strong><%= @performance.cost %></strong><br>
+      <%=auto_link @performance.link %>
     </p>
-  </section>
-  <section>
-    <h1>Starts At</h1>
-    <p>
-      <%=raw @performance.starts_at %>
-    </p>
-  </section>
-  <section>
-    <h1>Ends At</h1>
-    <p>
-      <%=raw @performance.ends_at %>
-    </p>
-  </section>
-  <section>
-    <h1>Cost</h1>
-    <p>
-      <%=raw @performance.cost %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @performance.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Link</h1>
-    <p>
-      <%=raw @performance.link %>
-    </p>
+    <%=raw @performance.description %>
   </section>
 <% end %>
 
@@ -54,4 +23,4 @@
   </aside>
 <% end %>
 
-<%= render :partial => "/shared/content_page" %>
+<%= render :partial => "/shared/content_page", :locals => { :remove_automatic_sections => true } %>
