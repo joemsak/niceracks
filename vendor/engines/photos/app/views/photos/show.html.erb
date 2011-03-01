@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @photo.caption %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Caption</h1>
+    <p>
+      <%=raw @photo.caption %>
+    </p>
+  </section>
+  <section>
+    <h1>Picture</h1>
+    <p>
+      <%= image_fu @photo.picture, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="photos">
+      <% @photos.each do |photo| %>
+        <li>
+          <%= link_to photo.caption, photo_url(photo) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

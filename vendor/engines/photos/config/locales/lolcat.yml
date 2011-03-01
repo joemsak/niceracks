@@ -1,0 +1,24 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    photos:
+      title: Photos
+  admin:
+    photos:
+      index:
+        title: Photos
+        create_new: CREATE NEW Photo
+        reorder: REORDR Photos
+        reorder_done: DUN REORDERIN Photos
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Photos YET. CLICK "CREATE NEW Photo" 2 ADD UR FURST photo.
+      photo:
+        view_live_html: VIEW DIS photo LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS photo
+        delete: REMOOV DIS photo FOREVR
+  photos:
+    show:
+      other: OTHR Photos

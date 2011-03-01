@@ -1,0 +1,20 @@
+nl:
+  plugins:
+    photos:
+      title: Photos
+  admin:
+    photos:
+      index:
+        title: Photos
+        create_new: Maak een nieuwe Photo
+        reorder: Wijzig de volgorde van de Photos
+        reorder_done: Klaar met het wijzingen van de volgorde van de Photos
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Photos. Druk op 'Maak een nieuwe Photo' om de eerste aan te maken.
+      photo:
+        view_live_html: Bekijk deze photo op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze photo
+        delete: Verwijder deze photo voor eeuwig
+  photos:
+    show:
+      other: Andere Photos

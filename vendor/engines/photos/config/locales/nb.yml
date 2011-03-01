@@ -1,0 +1,20 @@
+nb:
+  plugins:
+    photos:
+      title: Photos
+  admin:
+    photos:
+      index:
+        title: Photos
+        create_new: Lag en ny Photo
+        reorder: Endre rekkefølgen på Photos
+        reorder_done: Ferdig å endre rekkefølgen Photos
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Photos enda. Klikk på "Lag en ny Photo" for å legge til din første photo.
+      photo:
+        view_live_html: Vis hvordan denne photo ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne photo
+        delete: Fjern denne photo permanent
+  photos:
+    show:
+      other: Andre Photos

@@ -1,0 +1,24 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    photos:
+      title: Photos
+  admin:
+    photos:
+      index:
+        title: Photos
+        create_new: Add New Photo
+        reorder: Reorder Photos
+        reorder_done: Done Reordering Photos
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Photos yet. Click "Add New Photo" to add your first photo.
+      photo:
+        view_live_html: View this photo live <br/><em>(opens in a new window)</em>
+        edit: Edit this photo
+        delete: Remove this photo forever
+  photos:
+    show:
+      other: Other Photos

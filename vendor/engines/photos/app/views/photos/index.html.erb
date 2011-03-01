@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="photos">
+    <% @photos.each do |photo| %>
+      <li>
+        <%= link_to photo.caption, photo_url(photo) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -60,3 +60,4 @@ gem 'refinerycms-i18n',         '~> 0.9.9.9'
 
 gem 'refinerycms-ladies', '1.0', :path => 'vendor/engines'
 gem 'refinerycms-performances', '1.0', :path => 'vendor/engines'
+gem 'refinerycms-photos', '1.0', :path => 'vendor/engines'
