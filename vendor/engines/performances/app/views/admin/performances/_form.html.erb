@@ -5,6 +5,11 @@
         } %>
   
   <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
     <%= f.label :venue_name -%>
     <%= f.text_field :venue_name, :class => 'larger widest' -%>
   </div>
@@ -54,7 +59,7 @@
                 :f => f,
                 :continue_editing => false,
                 :delete_title => t('delete', :scope => 'admin.performances.performance'),
-                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @performance.venue_name)
+                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @performance.name)
               } %>
 <% end -%>
 <% content_for :javascripts do %>

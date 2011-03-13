@@ -1,7 +1,7 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(performance) -%>">
   <span class='title'>
-    <%= performance.venue_name %>
-    <span class="preview">&nbsp;</span>
+    <%= performance.name %>
+    <span class="preview">(<%= performance.venue_name %>)</span>
   </span>
   <span class='actions'>
     <%= link_to refinery_icon_tag("application_go.png"), performance_url(performance),
@@ -12,7 +12,7 @@
     <%= link_to refinery_icon_tag("delete.png"), admin_performance_path(performance),
         :class => "cancel confirm-delete",
         :title => t('.delete'),
-        :confirm => t('message', :scope => 'shared.admin.delete', :title => performance.venue_name),
+        :confirm => t('message', :scope => 'shared.admin.delete', :title => performance.name),
         :method => :delete %>
   </span>
 </li>

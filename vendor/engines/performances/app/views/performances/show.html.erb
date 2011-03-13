@@ -1,6 +1,6 @@
 <% content_for :body_content_left do %>
   <section>
-    <h1><%= @performance.starts_at.strftime '%b %d' %> &ndash; <%= @performance.venue_name %></h1>
+    <h1><%= @performance.starts_at.strftime '%b %d' %> &ndash; <%= @performance.name %></h1>
     <p>
       From <%= @performance.starts_at.strftime '%b %d at %I:%M%p' %> until <%= @performance.ends_at.strftime '%b %d at %I:%M%p' %><br>
       <strong><%= @performance.cost %></strong><br>
