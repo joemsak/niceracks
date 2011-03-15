@@ -6,7 +6,7 @@ class Photo < ActiveRecord::Base
   
   belongs_to :picture, :class_name => 'Image'
   
-  validates :photo_id, :presence => true
+  validates :picture_id, :presence => true
   
   def title
     caption.blank? ? picture.file_name : caption
