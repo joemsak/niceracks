@@ -1,3 +1,4 @@
+<% content_for :body_content_title, "Photos tagged &#8220;#{@tag_name.titleize}&#8221;".html_safe -%>
 <% content_for :body_content_left do %>
   <div id="photos">
     <% @photos.each do |photo| %>

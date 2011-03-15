@@ -1,32 +1,36 @@
-<% content_for :body_content_title do %>
-  <%= @photo.caption %>
-<% end %>
+<% content_for :body_content_title, "" %>
 
 <% content_for :body_content_left do %>
   <section>
-    <h1>Caption</h1>
     <p>
-      <%=raw @photo.caption %>
+      <%= image_fu @photo.picture, '500x500>', :alt => @photo.caption %><br>
+      <%= @photo.caption %>
     </p>
-  </section>
-  <section>
-    <h1>Picture</h1>
-    <p>
-      <%= image_fu @photo.picture, nil %>
+    <p>Tagged:<br>
+      <%=raw @photo.tag_list.collect { |t| link_to t, tagged_photos_path(t.parameterize) }.to_sentence %>
     </p>
   </section>
 <% end %>
 
 <% content_for :body_content_right do %>
   <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="photos">
-      <% @photos.each do |photo| %>
-        <li>
-          <%= link_to photo.caption, photo_url(photo) %>
-        </li>
-      <% end %>
-    </ul>
+    <% unless @photos.empty? -%>
+      <h2><%= t('.other') %></h2>
+      <div id="photos">
+        <% @photos.each do |photo| %>
+          <p><%= link_to image_fu(photo.picture, '150x150>', :alt => photo.caption), photo_url(photo) %></p>
+        <% end %>
+      </div>
+    <% end -%>
+    
+    <% unless @tags.nil? -%>
+      <h2>Tags</h2>
+      <div id="tag_cloud">
+        <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+          <%= link_to tag.name, tagged_photos_path(tag.name.parameterize), :class => css_class %>
+        <% end %>
+      </div>
+    <% end -%>
   </aside>
 <% end %>
 

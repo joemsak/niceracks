@@ -4,12 +4,7 @@
           :include_object_name => true
         } %>
   
-  <div class='field'>
-    <%= f.label :caption -%>
-    <%= f.text_field :caption, :class => 'larger widest' -%>
-  </div>
-  
-  <div class='field'>
+ <div class='field'>
     <%= f.label :picture -%>
     <%= render :partial => "/shared/admin/image_picker", :locals => {
           :f => f,
@@ -18,6 +13,18 @@
           :toggle_image_display => false
         } %>
   </div>
+  
+  <div class='field'>
+    <%= f.label :tag_list, "Tags" -%>
+    <%= f.text_field :tag_list, :class => 'larger' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :caption -%>
+    <%= f.text_field :caption, :class => 'larger' -%>
+  </div>
+  
+  
   
   <%= render :partial => "/shared/admin/form_actions",
               :locals => {
