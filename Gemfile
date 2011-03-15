@@ -6,7 +6,7 @@ gem 'rails', '3.0.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'acts-as-taggable-on'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -33,10 +33,10 @@ gem 'aws-s3', :require => 'aws/s3'
 # REFINERY CMS ================================================================
 # Anything you put in here will be overridden when the app gets updated.
 
-gem 'refinerycms',              '= 0.9.9.4'
+gem 'refinerycms',              '~> 0.9.9.4'
 
 group :development, :test do
-  # gem 'refinerycms-testing',    '~> 0.9.9.1'
+  gem 'refinerycms-testing',    '~> 0.9.9.1'
 end
 
 # END REFINERY CMS ============================================================
@@ -52,6 +52,8 @@ gem 'refinerycms-inquiries',    '~> 0.9'
 # gem 'refinerycms-search',       '~> 0.9.8'
 # gem 'refinerycms-blog',         '~> 1.1'
 # gem 'refinerycms-page-images,   '~> 1.0
+#gem 'refinerycms-calendar', :path => '~/Projects/Neoteric/refinerycms-calendar'
+gem 'refinerycms-calendar', '~>1.0'
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         '~> 0.9.9.9'
@@ -59,5 +61,4 @@ gem 'refinerycms-i18n',         '~> 0.9.9.9'
 # END USER DEFINED
 
 gem 'refinerycms-ladies', '1.0', :path => 'vendor/engines'
-gem 'refinerycms-performances', '1.0', :path => 'vendor/engines'
 gem 'refinerycms-photos', '1.0', :path => 'vendor/engines'
