@@ -9,7 +9,7 @@ class Photo < ActiveRecord::Base
   validates :picture_id, :presence => true
   
   def title
-    caption.blank? ? picture.file_name : caption
+    caption.blank? ? picture.image_name : caption
   end
   
 end
