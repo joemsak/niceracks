@@ -53,7 +53,7 @@ gem 'refinerycms-inquiries',    '~> 0.9'
 # gem 'refinerycms-blog',         '~> 1.1'
 # gem 'refinerycms-page-images,   '~> 1.0
 #gem 'refinerycms-calendar', :path => '~/Projects/Neoteric/refinerycms-calendar'
-gem 'refinerycms-calendar', '~>1.0'
+# gem 'refinerycms-calendar', '~>1.0'
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         '~> 0.9.9.9'
