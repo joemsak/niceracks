@@ -10,41 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110327212014) do
-
-  create_table "event_categories", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "event_categorizations", :force => true do |t|
-    t.integer  "event_id"
-    t.integer  "event_category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "event_categorizations", ["event_category_id"], :name => "index_event_categorizations_on_event_category_id"
-  add_index "event_categorizations", ["event_id"], :name => "index_event_categorizations_on_event_id"
-
-  create_table "events", :force => true do |t|
-    t.string   "title"
-    t.datetime "start_at"
-    t.datetime "end_at"
-    t.string   "venue_name"
-    t.string   "venue_address"
-    t.decimal  "ticket_price",  :precision => 8, :scale => 2
-    t.string   "ticket_link"
-    t.text     "description"
-    t.boolean  "featured"
-    t.integer  "image_id"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "events", ["id"], :name => "index_events_on_id"
+ActiveRecord::Schema.define(:version => 20110607205044) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -115,9 +81,6 @@ ActiveRecord::Schema.define(:version => 20110327212014) do
     t.integer  "page_id"
     t.string   "locale"
     t.string   "title"
-    t.string   "meta_keywords"
-    t.text     "meta_description"
-    t.string   "browser_title"
     t.string   "custom_title"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -209,6 +172,19 @@ ActiveRecord::Schema.define(:version => 20110327212014) do
 
   add_index "roles_users", ["role_id", "user_id"], :name => "index_roles_users_on_role_id_and_user_id"
   add_index "roles_users", ["user_id", "role_id"], :name => "index_roles_users_on_user_id_and_role_id"
+
+  create_table "seo_meta", :force => true do |t|
+    t.integer  "seo_meta_id"
+    t.string   "seo_meta_type"
+    t.string   "browser_title"
+    t.string   "meta_keywords"
+    t.text     "meta_description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
+  add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
 
   create_table "slugs", :force => true do |t|
     t.string   "name"
