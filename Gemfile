@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
-
+gem 'rake', '>=0.9.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -21,7 +21,7 @@ gem 'acts-as-taggable-on'
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'aws-s3', :require => 'aws/s3'
+# gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
@@ -34,6 +34,7 @@ gem 'aws-s3', :require => 'aws/s3'
 # Anything you put in here will be overridden when the app gets updated.
 
 gem 'refinerycms',              '~> 1.0.0'
+gem 'fog'
 
 group :development, :test do
   gem 'refinerycms-testing',    '~> 1.0.0'
