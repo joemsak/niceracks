@@ -31,6 +31,7 @@ protected
 
   def find_page
     @page = Page.find_by_link_url("/photos")
+    @section_name = 'photos'
   end
 
 end

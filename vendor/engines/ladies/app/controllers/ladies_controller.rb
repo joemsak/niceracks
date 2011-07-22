@@ -25,6 +25,7 @@ protected
 
   def find_page
     @page = Page.find_by_link_url("/ladies")
+    @section_name = 'ladies'
   end
 
 end

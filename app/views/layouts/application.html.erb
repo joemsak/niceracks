@@ -17,11 +17,11 @@
 	<header>
 		<h1>The Racketeers</h1>
 		<nav id="navigation">
-		<%= link_to "Performances", root_url %>
-		<%= link_to "Ladies", ladies_url %>
-		<%= link_to "Gallery", photos_url %>
-		<%= link_to "Blog", blog_root_url %>
-		<%= link_to "Contact", '/contact' %>
+		<%= link_to "Performances", root_url, :class => selected_if_page('home') %>
+		<%= link_to "Ladies", ladies_url, :class => selected_if_page('ladies') %>
+		<%= link_to "Gallery", photos_url, :class => selected_if_page('photos') %>
+		<%= link_to "Blog", blog_root_url, :class => selected_if_page('blog') %>
+		<%= link_to "Contact", '/contact', :class => selected_if_page('contact') %>
 		</nav>
 	</header>
 	<div id="about">An all-girl BMX bike dance collective from the streets of Chicago.</div>
