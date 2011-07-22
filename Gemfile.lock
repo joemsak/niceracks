@@ -168,6 +168,11 @@ GEM
       friendly_id_globalize3 (~> 3.2.1)
       refinerycms-core (= 1.0.3)
     refinerycms-base (1.0.3)
+    refinerycms-blog (1.6.2)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 1.0.3)
+      seo_meta (~> 1.1.0)
     refinerycms-core (1.0.3)
       acts_as_indexed (~> 0.7)
       awesome_nested_set (~> 2.0)
@@ -269,6 +274,7 @@ DEPENDENCIES
   rails (~> 3.0.9)
   rake
   refinerycms (~> 1.0.3)
+  refinerycms-blog (~> 1.6.2)
   refinerycms-i18n (~> 1.0.0)
   refinerycms-inquiries (~> 0.9)
   refinerycms-ladies (= 1.0)!
