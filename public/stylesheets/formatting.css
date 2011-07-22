@@ -3,8 +3,11 @@
   Formatting applies to backend WYSIWYG editors and all frontend.
 */
 
-p{
+body {
+	font-family: "helvetica neue", helvetica, sans-serif;
+}
 
+p{
 }
 
 h1{

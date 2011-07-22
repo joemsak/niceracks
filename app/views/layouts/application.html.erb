@@ -5,7 +5,7 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <%= stylesheet_link_tag "ie", :media => :screen %>
 <![endif]-->
-<title><%= "#{yield :browser_title} - " if content_for? :browser_title %>Client Name</title>
+<title><%= "#{yield :browser_title} - " if content_for? :browser_title %>The Racketeers</title>
 <%= stylesheet_link_tag "/compiled/screen", "formatting", :media => :screen %>
 <%= stylesheet_link_tag "/compiled/print", :media => :print %>
 <%= yield :stylesheets %>
@@ -13,10 +13,20 @@
 </head>
 <body>
 <%= render 'shared/site_bar' %>
-<nav id="navigation">
-<%= link_to "Home", root_url %>
-</nav>
-<%= yield %>
+<div id="container">
+	<header>
+		<h1>The Racketeers</h1>
+		<nav id="navigation">
+		<%= link_to "Performances", root_url %>
+		<%= link_to "Ladies", ladies_url %>
+		<%= link_to "Gallery", photos_url %>
+		<%= link_to "Blog", blog_root_url %>
+		<%= link_to "Contact", '/contact' %>
+		</nav>
+	</header>
+	<div id="about">An all-girl BMX bike dance collective from the streets of Chicago.</div>
+	<%= yield %>
+</div>
 <%= render 'shared/google_analytics' %>
 <%= render 'shared/javascripts' %>
 </body>
