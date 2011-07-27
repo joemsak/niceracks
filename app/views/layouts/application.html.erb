@@ -24,8 +24,10 @@
 		<%= link_to "Contact", '/contact', :class => selected_if_page('contact') %>
 		</nav>
 	</header>
-	<div id="about">An all-girl BMX bike dance collective from the streets of Chicago.</div>
-	<%= yield %>
+	<div id="content">
+		<div id="about">An all-girl BMX bike dance collective from the streets of Chicago.</div>
+		<%= yield %>
+	</div>
 </div>
 <%= render 'shared/google_analytics' %>
 <%= render 'shared/javascripts' %>

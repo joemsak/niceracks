@@ -5,10 +5,13 @@
 @import "compass/reset";
 
 body {
+	background: url('/images/background.jpg') repeat fixed;
+	font-size:14px;
 }
 
 #container {
 	@include container;
+	padding:0 5px 60px;
 }
 
 header {
@@ -17,31 +20,50 @@ header {
 	width:span(24);
 	h1 {
 		float:left;
+		font-size:24px;
+		color:#333;
+		@include text-shadow(0 -1px 1px rgba(255,255,255,0.8));
+
 	}
 	#navigation {
 		float:right;
 		a {
 			display:inline-block;
-			@include border-radius(2px);
-			background: rgba(0,0,0,0.6);
+			@include border-radius(3px);
+			background: rgba(202,5,0,0.5);
 			color:#fff;
 			@include text-shadow(0 1px 1px rgba(0,0,0,0.3));
 			padding:5px 10px;
 			text-decoration:none;
 			@include transition(background .2s);
 			&:hover, &.selected {
-				background: rgba(0,0,0,0.9);
+				background: rgba(202,5,0,1);
 			}
 		}
 	}
 }
 
-
-#about {
-	margin: 0 0 30px;
-	font-size: 24px;
+#content {
+	background: rgba(255,255,255,0.7);
+	@include border-radius(3px);
+	@include box-shadow(rgba(0,0,0,0.1), 0, 1px, 2px);
+	width:span(24);
+	float:left;
+	display:block;
 }
 
-#content {
+#about {
+	padding: 20px;
+	@include border-top-radius(3px);
+	background: rgba(202,5,0,1);
+	font-size: 24px;
+	text-align:left;
+	color:#FFF;
+	@include text-shadow(0 1px 1px rgba(0,0,0,0.3));
+}
+
+#body_content {
+	padding: 20px;
+	float:left;
 }
 
