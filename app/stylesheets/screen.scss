@@ -22,7 +22,7 @@ header {
 		float:left;
 		font-family: bello-pro;
 		font-size:40px;
-		color:#333;
+		color:#C40000;
 		font-weight:normal;
 		@include text-shadow(0 -1px 1px rgba(255,255,255,0.8));
 	}
@@ -33,14 +33,15 @@ header {
 			font-size:16px;
 			display:inline-block;
 			@include border-radius(2px);
-			background: rgba(0,0,0,0.3);
+			background: rgba(196,0,0,0.3);
 			color:#fff;
 			@include text-shadow(0 1px 1px rgba(0,0,0,0.2));
 			padding:5px 10px;
+			margin-left:5px;
 			text-decoration:none;
 			@include transition(background .2s);
 			&:hover, &.selected {
-				background: rgba(0,0,0,0.5);
+				background: rgba(196,0,0,0.8);
 			}
 		}
 	}
@@ -52,7 +53,7 @@ header {
 	float:left;
 	width:span(24);
 	color:#FFF;
-	margin-bottom:20px;
+	margin-bottom:30px;
 	p {
 		padding: 20px;	
 		float:left;
