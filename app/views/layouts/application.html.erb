@@ -10,6 +10,8 @@
 <%= stylesheet_link_tag "/compiled/print", :media => :print %>
 <%= yield :stylesheets %>
 <%= csrf_meta_tag %>
+<script type="text/javascript" src="http://use.typekit.com/tqo8cha.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 <%= render 'shared/site_bar' %>
@@ -24,8 +26,11 @@
 		<%= link_to "Contact", '/contact', :class => selected_if_page('contact') %>
 		</nav>
 	</header>
+	<div id="about">
+		<p>An all-girl BMX bike dance collective from the streets of Chicago.</p>
+		<%= link_to "Book Us!", '/contact', :class => 'book-us' %>
+	</div>
 	<div id="content">
-		<div id="about">An all-girl BMX bike dance collective from the streets of Chicago.</div>
 		<%= yield %>
 	</div>
 </div>

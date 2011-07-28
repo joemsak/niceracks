@@ -20,46 +20,74 @@ header {
 	width:span(24);
 	h1 {
 		float:left;
-		font-size:24px;
-		color:#333;
+		font-family: bello-pro;
+		font-size:40px;
+		color:#700000;
+		font-weight:normal;
 		@include text-shadow(0 -1px 1px rgba(255,255,255,0.8));
-
 	}
 	#navigation {
 		float:right;
 		a {
+			font-size:16px;
 			display:inline-block;
-			@include border-radius(3px);
+			@include border-radius(2px);
 			background: rgba(202,5,0,0.5);
 			color:#fff;
-			@include text-shadow(0 1px 1px rgba(0,0,0,0.3));
+			@include text-shadow(0 1px 1px rgba(0,0,0,0.2));
 			padding:5px 10px;
 			text-decoration:none;
 			@include transition(background .2s);
 			&:hover, &.selected {
-				background: rgba(202,5,0,1);
+				background: rgba(202,5,0,0.85);
 			}
 		}
 	}
 }
 
+#about {	
+	@include border-radius(2px);
+	background: rgba(202,5,0,0.85);	
+	float:left;
+	width:span(24);
+	color:#FFF;
+	margin-bottom:20px;
+	p {
+		padding: 20px;	
+		float:left;
+		font-size: 24px;
+		text-align:left;
+		@include text-shadow(0 1px 1px rgba(0,0,0,0.5));
+		margin:0;
+	}
+	.book-us {
+		float:right;
+		margin:10px 20px 10px 10px;
+		padding: 10px 10px 5px;	
+		font-family: bello-pro;
+		font-size: 28px;
+		color:#FFF;
+		font-weight:normal;
+		background:#C40000;
+		border:1px solid #AB0000;
+		@include text-shadow(-2px -3px 0px rgba(0,0,0,0.4));
+		@include border-radius(10px);
+		text-decoration:none;
+		@include transition(background, .2s);
+		&:hover {
+			background:#B50202;
+		}
+	}
+}
+
+
 #content {
 	background: rgba(255,255,255,0.7);
-	@include border-radius(3px);
-	@include box-shadow(rgba(0,0,0,0.1), 0, 1px, 2px);
+	@include border-radius(2px);
+	@include box-shadow(rgba(0,0,0,0.3), 0, 1px, 2px);
 	width:span(24);
 	float:left;
 	display:block;
-}
-
-#about {
-	padding: 20px;
-	@include border-top-radius(3px);
-	background: rgba(202,5,0,1);
-	font-size: 24px;
-	text-align:left;
-	color:#FFF;
-	@include text-shadow(0 1px 1px rgba(0,0,0,0.3));
 }
 
 #body_content {
