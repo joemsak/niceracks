@@ -15,31 +15,32 @@ body {
 }
 
 header {
-	margin: 30px 0;
+	margin: 30px 0 20px;
 	float:left;
 	width:span(24);
 	h1 {
 		float:left;
 		font-family: bello-pro;
 		font-size:40px;
-		color:#700000;
+		color:#333;
 		font-weight:normal;
 		@include text-shadow(0 -1px 1px rgba(255,255,255,0.8));
 	}
 	#navigation {
 		float:right;
+		padding-top:5px;
 		a {
 			font-size:16px;
 			display:inline-block;
 			@include border-radius(2px);
-			background: rgba(202,5,0,0.5);
+			background: rgba(0,0,0,0.3);
 			color:#fff;
 			@include text-shadow(0 1px 1px rgba(0,0,0,0.2));
 			padding:5px 10px;
 			text-decoration:none;
 			@include transition(background .2s);
 			&:hover, &.selected {
-				background: rgba(202,5,0,0.85);
+				background: rgba(0,0,0,0.5);
 			}
 		}
 	}
