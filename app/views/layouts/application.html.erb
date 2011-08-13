@@ -8,10 +8,32 @@
 <title><%= "#{yield :browser_title} - " if content_for? :browser_title %>The Racketeers</title>
 <%= stylesheet_link_tag "/compiled/screen", "formatting", :media => :screen %>
 <%= stylesheet_link_tag "/compiled/print", :media => :print %>
+<%= stylesheet_link_tag "supersized.core.css", :media => :screen %>
+
+
 <%= yield :stylesheets %>
 <%= csrf_meta_tag %>
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("jquery", "1");
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+		
 <script type="text/javascript" src="http://use.typekit.com/tqo8cha.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<%= javascript_include_tag 'supersized.core.3.2.1.min.js' %>
+
+<script type="text/javascript">	
+	jQuery(function($){
+		$.supersized({
+			slides  :  	[ {image : " <%= if (@random_photo != nil) then @random_photo.picture.url else '/images/background.jpg' end %>", title : 'The Racketeers'} ]
+		});
+	});			
+</script>
+
 </head>
 <body>
 <%= render 'shared/site_bar' %>

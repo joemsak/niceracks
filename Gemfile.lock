@@ -270,7 +270,9 @@ DEPENDENCIES
   acts-as-taggable-on
   aws-s3
   compass
+  dragonfly (~> 0.9.4)
   fog
+  rack-cache
   rails (~> 3.0.9)
   rake
   refinerycms (~> 1.0.3)
