@@ -3,36 +3,30 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @lady.name %>
-    </p>
+  <section id="lady">
+    <%= image_tag @lady.photo.thumbnail('368x').url %>
+    <div class="info">
+			<h1><%=raw @lady.name %></h1>
+			<p><%=raw @lady.bio %></p>
+		</div>
   </section>
-  <section>
-    <h1>Bio</h1>
-    <p>
-      <%=raw @lady.bio %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @lady.photo, nil %>
-    </p>
-  </section>
+
 <% end %>
 
 <% content_for :body_content_right do %>
-  <aside>
+  <aside id="other-ladies">
     <h2><%= t('.other') %></h2>
-    <ul id="ladies">
-      <% @ladies.each do |lady| %>
-        <li>
-          <%= link_to lady.name, lady_url(lady) %>
-        </li>
-      <% end %>
-    </ul>
+		<ul id="ladies">
+			<% @ladies.each do |lady| %>
+				<li>
+					<div>
+						<% lady_photo = image_tag lady.photo.thumbnail('174x').url %>
+						<%= link_to lady_photo, lady_url(lady), :class => 'photo' %>
+						<%= link_to lady.name, lady_url(lady), :class => 'name' %>
+					</div>
+				</li>
+			<% end %>
+		</ul>
   </aside>
 <% end %>
 

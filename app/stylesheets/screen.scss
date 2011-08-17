@@ -10,23 +10,25 @@ body {
 }
 
 #container {
-	@include container;
-	padding:0 5px 60px;
+	width:990px;
+	margin: 0 auto 60px;
+	overflow:hidden;
+	padding:20px;
 }
 
 header {
 	margin: 30px 0 20px;
 	float:left;
-	width:span(24);
+	width:100%;
 	.logo {
 		float:left;
 		font-family: bello-pro;
 		font-size:40px;
 		font-weight:normal;
-		@include text-shadow(-1px 1px 0 rgba(255,255,255,0.8));
+		@include text-shadow(-1px 1px 0 rgba(0,0,0,0.6));
 		a {
 			text-decoration:none;
-			color:#C40000;
+			color:rgb(196,0,0);
 		}
 	}
 	#navigation {
@@ -39,6 +41,7 @@ header {
 			background: rgba(196,0,0,0.4);
 			color:#fff;
 			@include text-shadow(0 1px 1px rgba(0,0,0,0.2));
+			@include box-shadow(-1px 1px 0 rgba(0,0,0,0.4));
 			padding:5px 10px;
 			margin-left:5px;
 			text-decoration:none;
@@ -52,9 +55,9 @@ header {
 
 #about {	
 	@include border-top-radius(2px);
-	background: rgba(202,5,0,0.95) url('/images/stars.png') repeat;	
+	background: rgb(202,5,0) url('/images/stars.png') repeat;	
 	float:left;
-	width:span(24);
+	width:100%;
 	color:#FFF;
 	border-bottom:1px solid #AB0000;
 	position:relative;
@@ -77,7 +80,7 @@ header {
 		font-weight:normal;
 		background:#B60000;
 		border:1px solid #990000;
-		@include text-shadow(-2px -3px 0px rgba(0,0,0,0.4));
+		@include text-shadow(-2px 2px 0px rgba(0,0,0,0.4));
 		@include border-radius(10px);
 		text-decoration:none;
 		@include transition(background, .2s);
@@ -89,19 +92,73 @@ header {
 
 
 #content {
-	background: rgba(202,5,0,0.8);
+	background: rgba(202,5,0,0.95);
 	@include border-bottom-radius(2px);
-	@include box-shadow(rgba(0,0,0,0.3), 0, 1px, 2px);
-	width:span(24);
+	@include box-shadow(-1px 1px 0 rgba(0,0,0,0.4));
+	width:100%;
 	float:left;
 	display:block;
 	position:relative;
 }
 
 #body_content {
-	padding: 20px;
+	width: span(20);
 	float:left;
 	line-height:1.4em;
 	@include text-shadow(0 1px 1px rgba(0,0,0,0.2));
+	#body_content_title {
+		font-size:24px;
+		margin-bottom:20px;
+	}
+	#body_content_left {
+		padding: 20px;
+		width: span(20);
+		overflow:hidden;
+	}
+	#body_content_right {
+		padding: 20px;
+		width: span(20);
+		border-top: 1px solid #990000;
+		overflow:hidden;
+	}
+}
+
+#ladies {
+	li {
+		@include column(4);		
+		.photo {
+			display:block;
+		}
+		.name {
+			display:block;
+			color:#FFF;
+			text-decoration:none;
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
+#other-ladies h2 {
+	padding-bottom:20px;
+	font-weight:700;
+}
+
+#lady {
+	img {
+		float:left;
+		@include column(8);
+	}
+	.info {
+		@include column(12, true);
+		@include inline-block;
+		h1 {
+			font-weight:700;
+			font-size:32px;
+			padding-bottom:20px;
+		}
+	}
+	
 }
 

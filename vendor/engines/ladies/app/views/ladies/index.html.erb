@@ -2,7 +2,11 @@
   <ul id="ladies">
     <% @ladies.each do |lady| %>
       <li>
-        <%= link_to lady.name, lady_url(lady) %>
+      	<div>
+      		<% lady_photo = image_tag lady.photo.thumbnail('174x').url %>
+        	<%= link_to lady_photo, lady_url(lady), :class => 'photo' %>
+          <%= link_to lady.name, lady_url(lady), :class => 'name' %>
+        </div>
       </li>
     <% end %>
   </ul>
