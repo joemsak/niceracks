@@ -11,10 +11,4 @@ class Photo < ActiveRecord::Base
   def title
     caption.blank? ? picture.image_name : caption
   end
-  
-	def self.random
-		if (c = count) != 0
-			find(:first, :offset =>rand(c))
-		end
-	end
 end
