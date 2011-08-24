@@ -61,7 +61,6 @@ header {
 	color:#FFF;
 	border-bottom:1px solid #AB0000;
 	position:relative;
-	@include box-shadow(rgba(0,0,0,0.3), 0, 1px, 2px);
 	p {
 		padding: 20px;	
 		float:left;
@@ -93,7 +92,7 @@ header {
 
 #content {
 	background: rgba(202,5,0,0.95);
-	@include border-bottom-radius(2px);
+	@include border-radius(2px);
 	@include box-shadow(-1px 1px 0 rgba(0,0,0,0.4));
 	width:100%;
 	float:left;
@@ -109,6 +108,11 @@ header {
 	#body_content_title {
 		font-size:24px;
 		margin-bottom:20px;
+		font-weight:700;
+		font-size:32px;	
+		padding:20px 20px 0;
+		width: span(20);
+		margin:0;
 	}
 	#body_content_left {
 		padding: 20px;
@@ -159,6 +163,62 @@ header {
 			padding-bottom:20px;
 		}
 	}
-	
 }
+
+form {
+	float:left;
+	.text-fields {
+		width:span(6);
+		margin-right:20px;
+	}
+	.field {
+		label {
+			display:block;
+			padding:0;
+			margin-bottom:4px;
+			@include text-shadow(0 1px 1px rgba(0,0,0,0.4));
+		}
+		input, textarea {
+			margin: 0 0 10px 0;
+			padding: 0 10px;
+			width:254px;
+			height:25px;
+			border:none;
+			@include box-shadow(0 1px 0 rgba(0,0,0,0.4));
+			border-top: 3px #FFF solid;
+			@include transition(border-color .2s);
+			&:focus {
+				outline:none;
+				border-top: 3px #333 solid;
+			}
+		}
+		textarea {
+			padding: 10px;
+			height: auto;
+		}
+	}
+	.actions {
+		clear:both;
+		input {
+			margin:0;
+			padding: 5px 10px;	
+			font-family: rooney-web, "helvetica neue", helvetica, sans-serif;
+			font-size: 18px;
+			color:#FFF;
+			font-weight:normal;
+			background:#B60000;
+			border:1px solid #990000;
+			@include text-shadow(-1px 1px 0px rgba(0,0,0,0.4));
+			@include border-radius(2px);
+			text-decoration:none;
+			@include transition(background .2s, border-color .2s);
+			&:hover {
+				background:#A10000;
+				cursor:pointer;
+				border-color:#810000;
+			}
+		}
+	}
+}
+
 

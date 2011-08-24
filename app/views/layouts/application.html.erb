@@ -48,11 +48,22 @@
 		<%= link_to "Contact", '/contact', :class => selected_if_page('contact') %>
 		</nav>
 	</header>
-	<div id="about">
-		<p>An all-girl BMX bike dance collective from the streets of Chicago.</p>
-		<%= link_to "Book Us!", '/contact', :class => 'book-us' %>
-	</div>
+	
 	<div id="content">
+		<% if (selected_if_page('home') == 'selected') then %>
+			<div id="about">
+				<p>An all-girl BMX bike dance collective from the streets of Chicago.</p>
+				<%= link_to "Book Us!", '/contact', :class => 'book-us' %>
+			</div>
+		<% 
+			end
+			if (selected_if_page('contact') == 'selected') then  
+		%>
+			<div id="about">
+				<p>Use the form below and we'll get back to you as soon as we can.</p>
+			</div>
+		<% end %>
+		
 		<%= yield %>
 	</div>
 </div>
